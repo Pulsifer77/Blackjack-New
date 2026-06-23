@@ -244,6 +244,10 @@ namespace Blackjack_New
         private PictureBox[] PlayerExtra_PB = new PictureBox[10];    // Extra Picture boxes for the extra cards        
         private void btn_Hit_Click(object sender, EventArgs e)
         {
+            if (StartClicked != true)
+            {
+                MessageBox.Show("Please click Stand to start the game");
+            }
             // Creates a new picture box with the same size and moves the new card right by a bit
             PlayerExtra_PB[PlayerHit_index] = new PictureBox();            
 
